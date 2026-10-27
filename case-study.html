@@ -32,11 +32,11 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
 .wrap{width:min(860px,calc(100% - 40px));margin:auto}
 .nav{position:sticky;top:0;z-index:50;background:rgba(var(--cream-rgb),.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
-.brand{display:flex;align-items:center;gap:10px;font:800 1.02rem var(--nunito);letter-spacing:-.02em}
+.brand{display:flex;align-items:center;gap:10px;min-height:40px;font:800 1.02rem var(--nunito);letter-spacing:-.02em}
 .brand .logo{display:block;width:36px;height:36px;flex:none}
 .right{display:flex;align-items:center;gap:12px}
-.back{font:500 .82rem var(--sans);color:var(--mut);transition:color .3s}.back:hover{color:var(--ink)}
-.theme{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:1.05rem;line-height:1;cursor:pointer}
+.back{display:inline-flex;align-items:center;min-height:40px;padding:0 18px;border:1px solid var(--navy);border-radius:999px;background:var(--navy);color:var(--cream);font:600 .84rem var(--sans);transition:background .3s,color .3s}.back:hover,.back:active,.back:focus-visible{background:transparent;color:var(--ink)}
+.theme{display:grid;place-items:center;flex:none;min-width:40px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:1.05rem;line-height:1;cursor:pointer}
 .eyebrow{font:500 .72rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--mut)}
 header.hero{padding:90px 0 40px}
@@ -63,13 +63,17 @@ section p{color:var(--body-ink);max-width:680px}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border:1px solid var(--navy);border-radius:999px;font:600 .86rem var(--sans);transition:all .35s var(--ease)}
 .btn:hover,.btn:active,.btn:focus-visible{background:var(--navy);color:var(--cream)}
 .btn-solid{background:var(--navy);color:var(--cream)}.btn-solid:hover,.btn-solid:active,.btn-solid:focus-visible{background:transparent;color:var(--ink)}
+footer a{display:inline-flex;align-items:center;min-height:40px}
 footer{display:flex;justify-content:space-between;gap:20px;padding:26px 0 calc(38px + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:var(--mut);font:500 .7rem var(--mono);letter-spacing:.1em;text-transform:uppercase}
-@media(max-width:560px){header.hero{padding-top:60px}.steps li{grid-template-columns:1fr;gap:6px}footer{flex-direction:column}}
+@media(max-width:560px){.back .long{display:none}}
+@media(max-width:480px){.brand{white-space:nowrap;font-size:.9rem}.back{white-space:nowrap}.nav-inner{gap:8px}.right{gap:8px}}
+@media(max-width:390px){.brand span{display:none}}
+@media(max-width:560px){header.hero{padding-top:60px}.steps li{grid-template-columns:1fr;gap:6px}footer{flex-direction:column;align-items:center;text-align:center;gap:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<nav class="nav"><div class="wrap nav-inner"><a class="brand" href="index.html"><img class="logo" src="sk-logo.svg" alt="" width="36" height="36">Siddamalla Pavan Kalyan</a><div class="right"><a class="back" href="index.html#work">← Back to work</a><button class="theme" id="theme" type="button" aria-label="Switch to dark mode" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.3 14.6A8.6 8.6 0 0 1 9.4 3.7a.6.6 0 0 0-.8-.7A9.6 9.6 0 1 0 21 15.4a.6.6 0 0 0-.7-.8z"/></svg></button></div></div></nav>
+<nav class="nav"><div class="wrap nav-inner"><a class="brand" href="index.html"><img class="logo" src="sk-logo.svg" alt="" width="36" height="36"><span>Siddamalla Pavan Kalyan</span></a><div class="right"><a class="back" href="index.html#work">← Back<span class="long">&nbsp;to work</span></a><button class="theme" id="theme" type="button" aria-label="Switch to dark mode" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.3 14.6A8.6 8.6 0 0 1 9.4 3.7a.6.6 0 0 0-.8-.7A9.6 9.6 0 1 0 21 15.4a.6.6 0 0 0-.7-.8z"/></svg></button></div></div></nav>
 <main>
 <header class="hero wrap">
   <p class="eyebrow">Case study · ML + NLP</p>
@@ -110,7 +114,7 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:26px 0 calc(3
 <section class="wrap">
   <h2>See more</h2>
   <p>The code and my other projects are on GitHub, and I'm happy to walk through the details of this one.</p>
-  <div class="btns"><a class="btn btn-solid" href="https://github.com/KALYANSIDDAMALLA" target="_blank" rel="noopener">GitHub ↗</a><a class="btn" href="index.html#contact">Let’s talk ↗</a></div>
+  <div class="btns"><a class="btn btn-solid" href="https://github.com/KALYANSIDDAMALLA" target="_blank" rel="noopener">GitHub ↗</a><a class="btn" href="index.html#contact">Let’s talk ↗</a><a class="btn" href="case-study-traffic-ai.html">Traffic AI case study →</a></div>
 </section>
 </main>
 <footer class="wrap"><span>© 2026 Siddamalla Pavan Kalyan</span><a href="index.html">← Back to portfolio</a></footer>
