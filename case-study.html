@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#f3f0e4">
 <title>Fake News Detection — Case Study · Siddamalla Pavan Kalyan</title>
 <link rel="canonical" href="https://kalyansiddamalla.github.io/case-study.html">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="sk-logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Fake News Detection — Case Study">
@@ -18,9 +18,9 @@
 <script>try{var t=localStorage.getItem('theme');if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.dataset.theme=t;if(t==='dark')document.querySelector('meta[name=theme-color]').content='#0f1224'}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:light;--navy-rgb:28,33,64;--cream-rgb:243,240,228;--card-rgb:250,248,239;--body-ink:#3a3f5c;--glow1:rgba(255,244,190,.7);--glow2:rgba(200,205,235,.35);--bg:#f3f0e4;--card:#faf8ef;--ink:#1c2140;--mut:#6c6f7e;--line:rgba(var(--navy-rgb),.13);--navy:#1c2140;--cream:#f3f0e4;--sans:'Inter',system-ui,sans-serif;--serif:'Instrument Serif',Georgia,serif;--mono:'IBM Plex Mono',monospace;--ease:cubic-bezier(.2,.7,.2,1)}
+:root{color-scheme:light;--navy-rgb:28,33,64;--cream-rgb:243,240,228;--card-rgb:250,248,239;--body-ink:#3a3f5c;--glow1:rgba(255,244,190,.7);--glow2:rgba(200,205,235,.35);--bg:#f3f0e4;--card:#faf8ef;--ink:#1c2140;--mut:#6c6f7e;--line:rgba(var(--navy-rgb),.13);--navy:#1c2140;--cream:#f3f0e4;--sans:'Inter',system-ui,sans-serif;--serif:'Instrument Serif',Georgia,serif;--mono:'IBM Plex Mono',monospace;--nunito:'Nunito',var(--sans);--ease:cubic-bezier(.2,.7,.2,1)}
 :root[data-theme=dark]{color-scheme:dark;--navy-rgb:236,233,220;--cream-rgb:15,18,36;--card-rgb:24,28,54;--body-ink:#c9ccdd;--glow1:rgba(96,84,160,.32);--glow2:rgba(60,84,160,.22);--bg:#0f1224;--card:#181c36;--ink:#ece9dc;--mut:#9ca0b8;--navy:#ece9dc;--cream:#0f1224}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;font-size:110%;scroll-behavior:smooth}
@@ -32,8 +32,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--navy);outline-offse
 .wrap{width:min(860px,calc(100% - 40px));margin:auto}
 .nav{position:sticky;top:0;z-index:50;background:rgba(var(--cream-rgb),.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
-.brand{display:flex;align-items:center;gap:10px;font:700 .95rem var(--sans);letter-spacing:-.02em}
-.brand i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:var(--cream);font:500 .7rem var(--mono);font-style:normal}
+.brand{display:flex;align-items:center;gap:10px;font:800 1.02rem var(--nunito);letter-spacing:-.02em}
+.brand .logo{display:block;width:36px;height:36px;flex:none}
 .right{display:flex;align-items:center;gap:12px}
 .back{font:500 .82rem var(--sans);color:var(--mut);transition:color .3s}.back:hover{color:var(--ink)}
 .theme{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:1.05rem;line-height:1;cursor:pointer}
@@ -69,7 +69,7 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:26px 0 calc(3
 </style>
 </head>
 <body>
-<nav class="nav"><div class="wrap nav-inner"><a class="brand" href="index.html"><i>SK</i>Siddamalla Pavan Kalyan</a><div class="right"><a class="back" href="index.html#work">← Back to work</a><button class="theme" id="theme" type="button" aria-label="Switch to dark mode" aria-pressed="false">☾</button></div></div></nav>
+<nav class="nav"><div class="wrap nav-inner"><a class="brand" href="index.html"><img class="logo" src="sk-logo.svg" alt="" width="36" height="36">Siddamalla Pavan Kalyan</a><div class="right"><a class="back" href="index.html#work">← Back to work</a><button class="theme" id="theme" type="button" aria-label="Switch to dark mode" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.3 14.6A8.6 8.6 0 0 1 9.4 3.7a.6.6 0 0 0-.8-.7A9.6 9.6 0 1 0 21 15.4a.6.6 0 0 0-.7-.8z"/></svg></button></div></div></nav>
 <main>
 <header class="hero wrap">
   <p class="eyebrow">Case study · ML + NLP</p>
@@ -116,7 +116,7 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:26px 0 calc(3
 <footer class="wrap"><span>© 2026 Siddamalla Pavan Kalyan</span><a href="index.html">← Back to portfolio</a></footer>
 <script>
 const themeBtn=document.getElementById('theme'),root=document.documentElement;
-function paintTheme(){const d=root.dataset.theme==='dark';themeBtn.textContent=d?'☀':'☾';themeBtn.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode');themeBtn.setAttribute('aria-pressed',String(d));document.querySelector('meta[name=theme-color]').content=d?'#0f1224':'#f3f0e4';}
+function paintTheme(){const d=root.dataset.theme==='dark';themeBtn.innerHTML=d?'<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></g></svg>':'<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.3 14.6A8.6 8.6 0 0 1 9.4 3.7a.6.6 0 0 0-.8-.7A9.6 9.6 0 1 0 21 15.4a.6.6 0 0 0-.7-.8z"/></svg>';themeBtn.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode');themeBtn.setAttribute('aria-pressed',String(d));document.querySelector('meta[name=theme-color]').content=d?'#0f1224':'#f3f0e4';}
 paintTheme();
 themeBtn.addEventListener('click',()=>{const n=root.dataset.theme==='dark'?'light':'dark';root.dataset.theme=n;try{localStorage.setItem('theme',n);}catch(e){}paintTheme();});
 </script>
